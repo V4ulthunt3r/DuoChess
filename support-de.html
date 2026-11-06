@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Duo-Chess</title>
+  <meta name="description" content="Hilfe zu Duo-Chess: Kassette öffnen, Spielmodi, Ausführungen und Käufe wiederherstellen.">
+  <link rel="alternate" hreflang="de" href="support-de.html">
+  <link rel="alternate" hreflang="en" href="support.html">
+  <meta name="theme-color" content="#F7F1E6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#170F0A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/landing.css?v=2">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<div id="nav-top" aria-hidden="true"></div>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index-de.html">
+      <img src="assets/icon-256.png" alt="" width="30" height="30">
+      <span>Duo-Chess</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-link hide-sm" href="index-de.html#play">Spielen</a>
+      <a class="nav-link hide-sm" href="index-de.html#finishes">Ausführungen</a>
+      <a class="nav-link hide-sm" href="support-de.html">Support</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Zwischen hell und dunkel wechseln" aria-pressed="false">
+        <svg class="ico" id="theme-icon" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg>
+      </button>
+      <a class="nav-link" href="support.html" hreflang="en" lang="en">EN</a>
+    </div>
+  </div>
+</nav>
+
+<main class="doc" id="main">
+  <h1>Support</h1>
+  <p class="doc-meta">Hilfe zu Duo-Chess auf iPhone Duo, iPhone und iPad</p>
+
+  <div class="summary">
+    <h2><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-mail"/></svg> Schreib mir</h2>
+    <p>Etwas klappt nicht, oder du hast eine Idee für die nächste Ausführung? Schreib an <a href="mailto:info@hildel.com">info@hildel.com</a>. Nenn mir bitte Gerätemodell, iOS-Version und die Ausführung, die du benutzt hast — dann kann ich es schnell nachstellen.</p>
+    <p>Hinweis: Die App-Oberfläche ist auf Englisch; die Begriffe unten stehen deshalb so, wie du sie in der App findest.</p>
+  </div>
+
+  <section>
+    <h2><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg> Die Kassette</h2>
+    <details>
+      <summary>Wie öffne ich die Kassette auf dem iPhone Duo?</summary>
+      <p>Tipp auf den Verschluss am rechten Rand des Deckels, um ihn zu lösen, und klapp dann das iPhone auf. Das Brett erscheint über beide Hälften des inneren Displays. Klappst du das iPhone zu, ist der verriegelte Deckel zurück; deine Partie bleibt erhalten.</p>
+    </details>
+    <details>
+      <summary>Und auf einem normalen iPhone oder iPad?</summary>
+      <p>Dort gibt es kein Scharnier, dem die App folgen kann, also öffnet sich der Deckel virtuell: Tipp auf den Verschluss, und er schwingt auf. Über den Messing-Menübeschlag → Close box schließt du ihn wieder.</p>
+    </details>
+    <details>
+      <summary>Was passiert, wenn ich das Duo halb aufgeklappt hinstelle?</summary>
+      <p>Das Brett wandert auf die untere Hälfte, und die obere wird zum Pult: die kostenlose Schachbühne oder mit Duo-Chess Pro Trainingsstation, Analysepult oder Schachuhr. Ganz aufgeklappt ist wieder das volle Brett da. Auf anderen Geräten wechselst du über Brettmenü → Tabletop.</p>
+    </details>
+    <details>
+      <summary>Ich habe das iPhone im Uhrenduell zugeklappt. Ist die Uhr stehen geblieben?</summary>
+      <p>Nein — wie bei einer echten Schachuhr läuft die Zeit weiter, während die Kassette geschlossen oder die App im Hintergrund ist. Über das Messingmenü pausierst du beide Uhren und setzt sie fort.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-knight"/></svg> Spielen</h2>
+    <details>
+      <summary>Wie starte ich einen anderen Modus?</summary>
+      <p>Öffne den Messing-Menübeschlag und wähle New game. Dann Two players, Solo practice, Clock duel, Analysis board oder Training und die passenden Optionen.</p>
+    </details>
+    <details>
+      <summary>Warum endete die Partie remis?</summary>
+      <p>Partien zu zweit enden automatisch remis, wenn dieselbe Stellung dreimal auftritt oder beide Seiten fünfzig Züge ohne Bauernzug und ohne Schlagen gemacht haben. Auf dem Analysebrett bleiben solche Linien spielbar.</p>
+    </details>
+    <details>
+      <summary>Kann ich einen Zug zurücknehmen?</summary>
+      <p>Ja, mit Undo im Messingmenü. Auf dem Analysebrett spielt Redo die Linie wieder vor, bis du einen anderen Zug machst.</p>
+    </details>
+    <details>
+      <summary>Die Figuren sind mir zu klein oder zu groß.</summary>
+      <p>Game options → Piece size skaliert die Figuren von 70 % bis 120 %. Use default size stellt 100 % wieder her. Felder und Tippflächen behalten ihre Größe.</p>
+    </details>
+    <details>
+      <summary>Wie funktioniert Game Center?</summary>
+      <p>Über Brettmenü → Game Center meldest du dich an und siehst deinen Fortschritt. Melde dich vor Spielbeginn an, damit die Partie zählt. In die Bestenlisten gehen nur Partien gegen den Computer ab der Grundstellung und ohne Zugrücknahme ein. Als Gast bleibt alles auf dem Gerät.</p>
+    </details>
+    <details>
+      <summary>Ich höre keinen Ton.</summary>
+      <p>Die Zuggeräusche folgen dem Stummschalter und der Lautstärke, wie andere Umgebungsgeräusche auch. Ton und Haptik haben in Game options jeweils einen eigenen Schalter.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-palette"/></svg> Ausführungen und Käufe</h2>
+    <details>
+      <summary>Was ist kostenlos, was kostet extra?</summary>
+      <p>Unbegrenztes Schach zu zweit und ausgewählte Basis-Ausführungen sind kostenlos, zum Launch ohne Werbung. Duo-Chess Pro (9,99 $, einmalig) schaltet die Ausführungen Crystal Ice, Obsidian Gold und Pure Glass, die erweiterten Pulte für das halb aufgeklappte Duo und den vollständigen Schachtrainer frei. Zehn Sammlerkollektionen kosten je 1,99 $ oder gibt es in drei Bundles: Fahrzeuge und Feiertage für je 5,99 $, Ritter und Wikinger für 2,99 $. Die Preise sind US-Launchpreise und können in deinem Land abweichen; die kostenpflichtigen Angebote sind zum Launch geplant.</p>
+    </details>
+    <details>
+      <summary>Sind die Kollektionen in Pro enthalten?</summary>
+      <p>Nein. Kollektionen und Bundles sind eigene Käufe und funktionieren mit oder ohne Pro. Ein Abo gibt es in keinem Fall.</p>
+    </details>
+    <details>
+      <summary>Kann ich mir eine Kollektion vor dem Kauf ansehen?</summary>
+      <p>Ja. Unter Finishes lässt sich jeder Satz in der Vorschau ansehen — Brett, Kassette und Beschläge —, ohne deine laufende Partie oder Ausführung zu ändern.</p>
+    </details>
+    <details>
+      <summary>Wie stelle ich meine Käufe auf einem neuen Gerät wieder her?</summary>
+      <p>Öffne Finishes und wähle Restore purchases, angemeldet mit demselben Apple Account. Alle Kollektionen, die dir gehören, sind wieder da.</p>
+    </details>
+    <details>
+      <summary>Wie bekomme ich mein Geld zurück?</summary>
+      <p>Käufe wickelt Apple ab. Eine Erstattung beantragst du unter <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+    </details>
+  </section>
+
+  <div class="back">
+    <a href="index-de.html" class="btn btn-primary"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"/></svg> Zurück zur App-Seite</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="index-de.html">Startseite</a>
+      <a href="support-de.html">Support</a>
+      <a href="privacy-de.html">Datenschutz</a>
+      <a href="impressum-de.html">Impressum</a>
+      <a href="support.html" hreflang="en" lang="en">English</a>
+    </div>
+    <p class="footer-note tiny">© <span id="year">2026</span> Peter Hildel · Duo-Chess steht in keiner Verbindung zu Apple Inc. Apple, iPhone, iPhone Duo, iPad und App Store sind Marken der Apple&nbsp;Inc.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=1" defer></script>
+</body>
+</html>

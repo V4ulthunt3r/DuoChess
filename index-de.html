@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duo-Chess — Ein Reiseschach für iPhone Duo</title>
+  <meta name="description" content="Duo-Chess macht aus dem iPhone Duo ein Reiseschach: Verschluss öffnen, iPhone aufklappen, und das Brett erstreckt sich über beide Displayhälften. Zu zweit, gegen den Computer, mit Schachuhr, Analyse und Training. Zu zweit kostenlos; Pro und Sammlerkollektionen als Einmalkauf. Kein Konto, kein Tracking.">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="de" href="index-de.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <meta name="theme-color" content="#F7F1E6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#170F0A" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Duo-Chess — Ein Reiseschach für iPhone Duo">
+  <meta property="og:description" content="Klapp dein iPhone Duo auf, und die Schachkassette öffnet sich mit. Das Brett erstreckt sich über beide Displayhälften.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:locale" content="de">
+  <meta property="og:locale:alternate" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/landing.css?v=3">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<div id="nav-top" aria-hidden="true"></div>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index-de.html">
+      <img src="assets/icon-256.png" alt="" width="30" height="30">
+      <span>Duo-Chess</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-link hide-sm" href="#fold">Die Kassette</a>
+      <a class="nav-link hide-sm" href="#play">Spielen</a>
+      <a class="nav-link hide-sm" href="#finishes">Ausführungen</a>
+      <a class="nav-link hide-sm" href="#game">In Aktion</a>
+      <a class="nav-link hide-sm" href="#pricing">Preise</a>
+      <a class="nav-link hide-sm" href="support-de.html">Support</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Zwischen hell und dunkel wechseln" aria-pressed="false">
+        <svg class="ico" id="theme-icon" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg>
+      </button>
+      <a class="nav-link" href="index.html" hreflang="en" lang="en">EN</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============================ Hero ============================ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <img class="hero-icon" src="assets/icon-512.png" alt="App-Symbol von Duo-Chess: ein Springer aus Ahorn und einer aus Nussbaum, die sich über einem Messingscharnier ansehen" width="88" height="88">
+        <p class="eyebrow">Gemacht für iPhone Duo</p>
+        <h1>Aufklappen.<br><span class="accent">Aufstellen.</span></h1>
+        <p class="lede">
+          Duo-Chess macht aus dem iPhone Duo ein Reiseschach. Das iPhone ist die Kassette,
+          das Display ist das Brett: Messingverschluss anheben, aufklappen, und das Brett
+          erstreckt sich über beide Displayhälften — Weiß auf der einen Seite des Falzes,
+          Schwarz auf der anderen.
+        </p>
+        <div class="btn-row">
+          <span class="store-badge" aria-label="Bald im App Store">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+            <span><small>Bald im</small><b>App Store</b></span>
+          </span>
+          <a class="btn btn-secondary" href="#finishes">
+            Ausführungen ansehen
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-arrow-down"/></svg>
+          </a>
+        </div>
+        <div class="pill-row">
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg> Ein Brett über den Falz</span>
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-palette"/></svg> 19 Ausführungen</span>
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-eye-off"/></svg> Kein Konto, kein Tracking</span>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <div class="duo">
+          <div class="screen">
+            <img src="assets/img/duo-walnut.jpg" alt="Duo-Chess auf dem aufgeklappten iPhone Duo: ein Brett „Classic Walnut“ aus Nussbaum und Ahorn füllt das ganze innere Display, links die Ahornfiguren, rechts die Nussbaumfiguren, auf der Leiste steht „White to move“." width="1800" height="1266">
+          </div>
+        </div>
+        <figcaption>Classic Walnut auf dem iPhone Duo, aufgenommen im Simulator.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ The case ============================ -->
+  <section class="block tinted" id="fold">
+    <div class="wrap split wide-right">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Die Kassette</p>
+          <h2>Das iPhone ist die Kassette. Das Display ist das Brett.</h2>
+          <p>
+            Kein Startbildschirm, keine Menüs. Duo-Chess öffnet sich als geschlossene
+            Schachkassette in deiner gewählten Ausführung. Klapp das iPhone Duo auf, und du
+            schaust direkt aufs Brett.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg></span>
+            <h3>Verschluss heben, dann aufklappen</h3>
+            <p>Der Verschluss schwenkt mit einem leisen mechanischen Klicken um seinen Stift. Danach wartet die Kassette, bis du das iPhone öffnest — den Rest erledigt das echte Scharnier.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg></span>
+            <h3>Der Falz liegt zwischen den Spielern</h3>
+            <p>Die Reihen laufen entlang der langen Seite, ihr sitzt euch also gegenüber. Die beiden Brett­hälften treffen sich genau am Falz, zwischen vierter und fünfter Reihe.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-fold"/></svg></span>
+            <h3>Mitten in der Partie zuklappen</h3>
+            <p>Zuklappen verriegelt den Deckel wieder und blendet alle Bedienelemente aus. Stellung, Uhren und sogar eine offene Bauernumwandlung warten auf dich, wenn du wieder öffnest.</p>
+          </li>
+        </ul>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <div class="duo">
+          <div class="screen">
+            <img src="assets/img/duo-tournament.jpg" alt="Eine laufende Partie in der Ausführung Tournament Green: elfenbeinfarbene und salbeigrüne Felder über beide Hälften des iPhone-Duo-Displays." width="1800" height="1266" loading="lazy">
+            <span class="fold-mark" aria-hidden="true"><span>Der Falz</span></span>
+            <span class="side-tag l" aria-hidden="true">Weiß</span>
+            <span class="side-tag r" aria-hidden="true">Schwarz</span>
+          </div>
+        </div>
+        <p class="fig-note" style="margin-top:1rem">Tournament Green. Die gestrichelte Linie markiert das Scharnier des Duo.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ In action ============================ -->
+  <section class="block" id="game">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">In Aktion</p>
+        <h2>Eine ganze Partie in dreißig Sekunden.</h2>
+        <p>Schäfermatt auf Classic Walnut mit eingeschalteten fließenden Zügen: Legale Felder erscheinen als Punkte, der Springer springt, die Dame schlägt auf f7 — und der siegreiche König steigt aufs Podest.</p>
+      </div>
+      <figure class="reveal game-figure">
+        <div class="duo">
+          <div class="screen">
+            <video src="assets/img/duo-game.mp4" poster="assets/img/duo-game-poster.jpg" autoplay muted loop playsinline preload="metadata" width="1440" height="1012"
+                   aria-label="Aufnahme auf dem iPhone Duo: eine Partie zu zweit auf Classic Walnut. Nach 1. e4 e5 2. Lc4 Sc6 3. Dh5 Sf6 4. Dxf7 matt erscheint eine Karte „White wins“, auf der sich der weiße König zwischen Dame und Turm auf einem Podest erhebt."></video>
+          </div>
+        </div>
+        <figcaption class="fig-note">Aufgenommen im iPhone-Duo-Simulator. 1. e4 e5 2. Lc4 Sc6 3. Dh5 Sf6 4. Dxf7#</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ Play ============================ -->
+  <section class="block tinted" id="play">
+    <div class="wrap split flip">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Fünf Arten zu spielen</p>
+          <h2>Am Tisch zu zweit oder für dich allein.</h2>
+          <p>
+            Ein neues Spiel beginnt mit fünf Modus-Karten. Wähl eine aus, und es erscheinen nur
+            die Optionen, die dafür zählen — dann steht das Brett. Klassisches Schach zu zweit ist kostenlos und unbegrenzt.
+          </p>
+        </div>
+        <ul class="modes">
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-people"/></svg>
+            <h3>Zu zweit</h3>
+            <p>Ein Brett, zwei Seiten des Tisches. Stellungswiederholung und 50-Züge-Regel werden automatisch gewertet.</p>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-user"/></svg>
+            <h3>Allein üben</h3>
+            <p>Wähl deine Farbe und wie weit der Computer vorausdenkt.</p>
+            <div class="chips"><span class="chip">Relaxed</span><span class="chip">Considered</span><span class="chip">Sharp</span></div>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-clock"/></svg>
+            <h3>Uhrenduell</h3>
+            <p>An jedem Ende eine eingravierte Uhr, zum jeweiligen Spieler gedreht. Jeder Zug schaltet die Uhr um und schreibt das Inkrement gut.</p>
+            <div class="chips"><span class="chip">3 + 2</span><span class="chip">5 Minuten</span><span class="chip">10 + 5</span></div>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-branch"/></svg>
+            <h3>Analysebrett</h3>
+            <p>Varianten durchspielen mit Rückgängig und Wiederholen. Ein anderer Zug eröffnet eine neue Linie.</p>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-bulb"/></svg>
+            <h3>Training <span class="pro-tag">Pro</span></h3>
+            <p>Vier Mattbilder mit optionalen Hinweisen. Ein Zug, der das Matt verfehlt, setzt die Stellung sanft zurück; gelöste Lektionen bleiben gespeichert. Der vollständige Trainer gehört zu Pro.</p>
+            <div class="chips"><span class="chip">Grundreihe</span><span class="chip">König und Dame</span><span class="chip">Springernetz</span><span class="chip">Läufernetz</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal" style="display:grid;justify-items:center">
+        <div class="phone">
+          <div class="screen">
+            <img src="assets/img/phone-modes.jpg" alt="Das Blatt „Set the board“ in Duo-Chess: Karten für Two players, Solo practice, Clock duel, Analysis board und Training auf elfenbeinfarbenem Papier." width="900" height="1957" loading="lazy">
+            <span class="island" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="fig-note" style="margin-top:1rem">Die App-Oberfläche ist auf Englisch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Finishes ============================ -->
+  <section class="block" id="finishes">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Standard-Ausführungen</p>
+        <h2>Jedes Brett bringt seine Kassette mit.</h2>
+        <p>
+          Jede Ausführung hat ihr eigenes Brett, eigene Figuren, Kassette und Verschluss. Ausgewählte
+          Basis-Ausführungen sind kostenlos; Crystal Ice, Obsidian Gold und Pure Glass
+          gehören zu Duo-Chess Pro. Wechseln geht jederzeit — die Partie bleibt, wo sie ist.
+          Probier sie hier auf dem Duo aus.
+        </p>
+      </div>
+      <div class="finish-stage reveal" data-finishes>
+        <div class="duo">
+          <div class="screen">
+            <img class="on" data-key="walnut" src="assets/img/duo-walnut.jpg" alt="Das Brett Classic Walnut auf dem iPhone Duo." width="1800" height="1266" loading="lazy">
+          </div>
+        </div>
+        <div class="finish-meta" aria-live="polite">
+          <div><b data-finish-name>Classic Walnut</b><span class="pro-tag" data-finish-pro hidden>Pro</span> <span data-finish-sub>Amerikanischer Nussbaum · warmer Ahorn</span></div>
+          <small data-finish-metal>Gealtertes Messing · klassischer Riegel</small>
+        </div>
+        <div class="finish-picker" role="group" aria-label="Ausführung wählen">
+          <button class="finish-btn" type="button" aria-pressed="true" data-finish="walnut" data-src="assets/img/duo-walnut.jpg"
+                  data-name="Classic Walnut" data-sub="Amerikanischer Nussbaum · warmer Ahorn" data-metal="Gealtertes Messing · klassischer Riegel"
+                  data-alt="Das Brett Classic Walnut auf dem iPhone Duo.">
+            <span class="sq" style="--l:#CCA378;--d:#734731;--r:#42261A"><i></i></span>Classic Walnut</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="tournament" data-src="assets/img/duo-tournament.jpg"
+                  data-name="Tournament Green" data-sub="Flaches Staunton · Salbei & Elfenbein" data-metal="Satiniertes Messing · Feldverschluss"
+                  data-alt="Das Brett Tournament Green auf dem iPhone Duo: flache Staunton-Figuren auf elfenbeinfarbenen und salbeigrünen Feldern.">
+            <span class="sq" style="--l:#EEEED2;--d:#769656;--r:#283D32"><i></i></span>Tournament</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="ocean" data-src="assets/img/duo-ocean.jpg"
+                  data-name="Ocean Blue" data-sub="Fließende Konturen · Blau & Nebel" data-metal="Gebürstetes Nickel · Marine-Knebel"
+                  data-alt="Das Brett Ocean Blue auf dem iPhone Duo: Figuren mit fließenden Konturen auf nebelgrauen und tiefblauen Feldern.">
+            <span class="sq" style="--l:#DCE8EF;--d:#527A9B;--r:#20384D"><i></i></span>Ocean Blue</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="graphite" data-src="assets/img/duo-graphite.jpg"
+                  data-name="Graphite" data-sub="Geometrische Figuren · Schiefer & Silber" data-metal="Gunmetal · Präzisionsriegel"
+                  data-alt="Das Brett Graphite auf dem iPhone Duo: kantige Figuren auf silbernen und schiefergrauen Feldern.">
+            <span class="sq" style="--l:#DADDE1;--d:#717985;--r:#2C313A"><i></i></span>Graphite</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="lavender" data-src="assets/img/duo-lavender.jpg"
+                  data-name="Lavender" data-sub="Runde Figuren · Violett & Flieder" data-metal="Roségold · runder Verschluss"
+                  data-alt="Das Brett Lavender auf dem iPhone Duo: weiche, runde Figuren auf fliederfarbenen und violetten Feldern.">
+            <span class="sq" style="--l:#EBE3F2;--d:#9580AF;--r:#3F324F"><i></i></span>Lavender</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="crystal" data-src="assets/img/duo-crystal.jpg"
+                  data-name="Crystal Ice" data-sub="Klarer Kristall · Gletscherblau · Milchglas" data-metal="Platin · facettierter Verschluss"
+                  data-alt="Das Brett Crystal Ice auf dem iPhone Duo: klare und türkisfarbene Glasfiguren auf einem mattierten blauen Brett mit feinen Rissen.">
+            <span class="sq" style="--l:#B5DFE8;--d:#23738B;--r:#103A50"><i></i></span>Crystal Ice</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="obsidian" data-src="assets/img/duo-obsidian.jpg"
+                  data-name="Obsidian Gold" data-sub="Skulpturales Gold · schwarzes Titan · Marmor" data-metal="Champagnergold · monolithischer Riegel"
+                  data-alt="Das Brett Obsidian Gold auf dem iPhone Duo: architektonische Figuren aus Gold und schwarzem Titan auf anthrazitfarbenem Marmor.">
+            <span class="sq" style="--l:#5B5C60;--d:#292B30;--r:#232329"><i></i></span>Obsidian Gold</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="glass" data-src="assets/img/duo-glass.jpg"
+                  data-name="Pure Glass" data-sub="Klares & Rauchglas · satinierte Felder" data-metal="Poliertes Silber · Kapselverschluss"
+                  data-alt="Das Brett Pure Glass auf dem iPhone Duo: Figuren aus klarem Glas und Rauchglas auf klaren und satinierten Feldern.">
+            <span class="sq" style="--l:#ADB4BF;--d:#505C70;--r:#303949"><i></i></span>Pure Glass</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Tabletop ============================ -->
+  <section class="block tinted" id="tabletop">
+    <div class="wrap split wide-right">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Halb aufgeklappt</p>
+          <h2>Wie ein Laptop aufstellen. Oben entsteht ein Pult.</h2>
+          <p>
+            Stell das Duo halb aufgeklappt auf den Tisch, und das Brett liegt flach auf der unteren
+            Hälfte. Die obere Hälfte wird zum Pult, das der Partie folgt — und verschwindet wieder,
+            sobald du ganz aufklappst.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-knight"/></svg></span>
+            <h3>Schachbühne</h3>
+            <p>Die Stellung in 3D, wer am Zug ist, der letzte Zug, geschlagene Figuren und im Einzelspiel die Spielstärke des Computers. Für jede Partie kostenlos.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-bulb"/></svg></span>
+            <h3>Trainingsstation <span class="pro-tag">Pro</span></h3>
+            <p>Der vollständige Schachtrainer: Aufgabe, optionaler Hinweis, gespeicherter Fortschritt und eine Erklärung, sobald das Matt gefunden ist.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-branch"/></svg></span>
+            <h3>Analysepult <span class="pro-tag">Pro</span></h3>
+            <p>Ein Partieformular der ganzen Linie. Tipp auf einen Zug, um dorthin zurückzuspringen.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-clock"/></svg></span>
+            <h3>Schachuhr <span class="pro-tag">Pro</span></h3>
+            <p>Große digitale Partieuhren — und eine eigenständige Uhr für ein echtes Brett auf dem Tisch.</p>
+          </li>
+        </ul>
+      </div>
+      <figure class="reveal tabletop-figure">
+        <div class="tt" role="img" aria-label="Tischansicht mit Viking Voyage: Oben zeigt die Schachbühne die Stellung in 3D und „Black to move · Last move e4“, unten liegt das flache Brett.">
+          <div class="tt-half tt-top"></div>
+          <div class="tt-half tt-bottom"></div>
+        </div>
+        <img class="desks" src="assets/img/desks.jpg" alt="Die vier Pulte: Chess stage, Training station (Pro) mit „The back rank“, Analysis desk (Pro) mit Partieformular und Chess clock (Pro) mit zwei Uhren auf 3:00." width="1488" height="920" loading="lazy">
+        <figcaption class="fig-note">Tischansicht mit Viking Voyage und die vier Pulte, zur Durchsicht gerendert.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ Collections ============================ -->
+  <section class="block" id="collections">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Sammlerkollektionen</p>
+        <h2>Zehn eigene Welten.</h2>
+        <p>
+          Autos, Maschinen, Flugzeuge, Feiertage, Ritter und Wikinger: Jede Kollektion ist ein komplett
+          modellierter Satz mit eigener Kassette und eigenen Beschlägen. Einzeln kaufen, unabhängig von
+          Pro, oder im Bundle — und jeden Satz vorher in Ruhe ansehen.
+        </p>
+      </div>
+      <div class="collections">
+        <article class="collection wide reveal">
+          <header><h3>Ultimate Vehicle Bundle</h3><span class="price-pill">4 Kollektionen · <b>5,99 $</b></span></header>
+          <div class="holiday-grid">
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/racers-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/racers-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/racers-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Pocket Racers<small>Sammlerautos 1:64 · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/heavyDuty-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/heavyDuty-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/heavyDuty-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Heavy Duty<small>Baumaschinen · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/skySquadron-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/skySquadron-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/skySquadron-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Sky Squadron<small>Sammlerflugzeuge · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/fieldCommand-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/fieldCommand-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/fieldCommand-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Field Command<small>Militärminiaturen · 1,99 $</small></figcaption></figure>
+          </div>
+          <p>Sechs Fahrzeugrollen pro Seite. Autos fahren auf ihr Feld, statt zu hüpfen, Maschinen bewegen sich mit Gewicht, Flugzeuge steigen und legen sich in die Kurve — und die Dame von Field Command ist ein Hubschrauber.</p>
+        </article>
+
+        <article class="collection wide reveal">
+          <header><h3>Holiday Collection Bundle</h3><span class="price-pill">4 Kollektionen · <b>5,99 $</b></span></header>
+          <div class="holiday-grid">
+            <figure><div class="lineup">
+                <img src="assets/pieces/christmas-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/christmas-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/christmas-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Christmas Eve<small>Schneemänner, Rentiere, Weihnachtsmann · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/easter-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/easter-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/easter-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Easter Garden<small>Bemalte Eier, gekrönte Hasen · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/halloween-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/halloween-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/halloween-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Halloween Night<small>Kürbisse, Fledermäuse, eine Geisterdame · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/newYear-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/newYear-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/newYear-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Midnight Celebration<small>Sterne, ein Partypony, die Mitternachtsuhr · 1,99 $</small></figcaption></figure>
+          </div>
+          <p>Verspielte Spielzeugminiaturen mit eigenen Kronen, Höhen und Silhouetten, damit jeder Rang auch in Spielgröße lesbar bleibt. Jede Kassette bekommt ihre eigene Gravur und ein Emaille-Medaillon — spielbar das ganze Jahr.</p>
+        </article>
+
+        <article class="collection wide reveal">
+          <header><h3>Legends Collection Bundle</h3><span class="price-pill">2 Kollektionen · <b>2,99 $</b></span></header>
+          <div class="holiday-grid legends">
+            <figure><div class="lineup">
+                <img src="assets/pieces/kingdom-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-white-bishop.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Kingdom Knights<small>Silber &amp; Blau gegen Stahl &amp; Purpur · 1,99 $</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/vikings-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-white-bishop.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Viking Voyage<small>Esche &amp; Petrol gegen Eiche &amp; Rost · 1,99 $</small></figcaption></figure>
+          </div>
+          <p>Zwei verfeindete Ritterhäuser mit Schildwachen, Reitern und Burgtürmen — und zwei Wikingerclans mit Drachenbooten, Runenseherinnen und einem gekrönten Jarl, in einer Kassette aus Eichenplanken mit Eisenbändern.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Pricing ============================ -->
+  <section class="block tinted" id="pricing">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Free, Pro &amp; Kollektionen</p>
+        <h2>Kostenlos spielen. Einmal mehr freischalten.</h2>
+        <p>Kostenlos Schach zu zweit spielen. Mit Duo-Chess Pro einmalig zusätzliche Spielmodi, Themes und Schachtraining freischalten. Besondere Figurenwelten sind separat als Kollektionen und Bundles erhältlich. Kein Abo. Keine Werbung zum Launch.</p>
+      </div>
+      <div class="plans plans-3 reveal">
+        <div class="plan">
+          <h3>Kostenlos</h3>
+          <p class="plan-price">0 $</p>
+          <ul>
+            <li>Unbegrenzt klassisches Schach zu zweit</li>
+            <li>Aufklappen und spielen — Kassette, Verschluss und das Brett über den Falz</li>
+            <li>Ausgewählte Basis-Ausführungen</li>
+            <li>Die Schachbühne, wenn das Duo halb aufgeklappt steht</li>
+            <li>Keine Werbung zum Launch</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Duo-Chess Pro</h3>
+          <p class="plan-price">9,99 $ <small>einmalig</small></p>
+          <ul>
+            <li>Crystal Ice, Obsidian Gold und Pure Glass</li>
+            <li>Erweiterte Modi für das halb aufgeklappte Duo: Trainingsstation, Analysepult, Schachuhr</li>
+            <li>Die eigenständige Uhr für ein echtes Brett</li>
+            <li>Der vollständige Schachtrainer</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Kollektionen</h3>
+          <p class="plan-price">1,99 $ <small>je Kollektion</small></p>
+          <ul>
+            <li>Zehn Sammlersätze, einzeln kaufbar und unabhängig von Pro</li>
+            <li>Ultimate Vehicle Bundle — vier Fahrzeugsätze für 5,99 $</li>
+            <li>Holiday Collection Bundle — vier Feiertagssätze für 5,99 $</li>
+            <li>Legends Collection Bundle — Ritter und Wikinger für 2,99 $</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans-note tiny reveal"><span class="tag tag-plan">Zum Launch geplant</span> Die kostenpflichtigen Angebote sind zum Launch geplant. Die Preise sind US-Launchpreise; in deinem Land können sie abweichen. Alle Käufe sind dauerhafte Einmalkäufe und lassen sich mit demselben Apple Account auf jedem Gerät wiederherstellen. Pro enthält die Kollektionen nicht.</p>
+    </div>
+  </section>
+
+  <!-- ============================ Details ============================ -->
+  <section class="block" id="details">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Details</p>
+        <h2>Figuren mit Gewicht.</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-motion"/></svg></span>
+          <h3>Fließende Züge</h3>
+          <p>Optional: Springer springen im Bogen, Läufer neigen sich, Bauern machen einen Schritt, Türme gleiten dicht übers Brett. Jede Ausführung stimmt ihre eigene Bewegung ab. Standardmäßig aus.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-sound"/></svg></span>
+          <h3>Holz auf Holz</h3>
+          <p>Ein trockenes Aufsetzen, ein tieferer Schlag beim Schlagen, zwei kurze Klicks bei der Rochade — mit passender Haptik. Ton und Haptik lassen sich getrennt schalten und folgen dem Stummschalter.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg></span>
+          <h3>Ein Podest für den Sieger</h3>
+          <p>Am Ende erhebt sich der siegreiche König zwischen Dame und Turm — in den Figuren deiner Ausführung. Bei Remis verbeugen sich beide Könige. Die Schlussstellung bleibt einen Tipp entfernt.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-resize"/></svg></span>
+          <h3>Figurengröße</h3>
+          <p>Figuren von 70 % bis 120 % skalieren, mit Live-Vorschau. Felder und Tippflächen behalten ihre Größe.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg></span>
+          <h3>Game Center</h3>
+          <p>Zwölf Erfolge, von der ersten Rochade bis zu allen vier Lektionen ohne Hinweis, und Bestenlisten für Siege gegen den Computer in jeder Stärke. Optional — als Gast spielst du genauso.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-access"/></svg></span>
+          <h3>Für alle</h3>
+          <p>VoiceOver benennt jedes Feld und sagt legale Züge an. Dynamische Schrift, „Bewegung reduzieren“, „Transparenz reduzieren“ und „Kontrast erhöhen“ werden berücksichtigt.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Other iPhones ============================ -->
+  <section class="block tinted" id="iphone">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Auch auf iPhone und iPad</p>
+          <h2>Ein Deckel statt eines Scharniers.</h2>
+          <p>
+            Ohne Falz bekommt die Kassette einen virtuellen Deckel. Heb den Verschluss an, und
+            er schwingt um seine Scharniere auf; über das Brettmenü schließt du ihn wieder.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hand"/></svg></span>
+            <h3>Gleich hier ausprobieren</h3>
+            <p>Tipp auf den Messingverschluss des iPhones neben diesem Text.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg></span>
+            <h3>Gleiches Spiel, gleiche Ausführungen</h3>
+            <p>Alle Modi, Ausführungen und Einstellungen laufen auf jedem iPhone und iPad mit iOS 18 oder neuer.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-restore"/></svg></span>
+            <h3>Weiter, wo du aufgehört hast</h3>
+            <p>Deine Partie wird auf dem Gerät gespeichert und übersteht jedes Öffnen, Schließen und jeden Neustart.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="case-demo reveal" data-case>
+        <div class="phone">
+          <div class="screen">
+            <img src="assets/img/phone-board.jpg" alt="Die geöffnete Kassette auf dem iPhone: ein Brett Classic Walnut im Hochformat nach 1. e4 d5, darunter „White to move“ und der Messing-Menübeschlag." width="900" height="1957" loading="lazy">
+            <div class="lid">
+              <img src="assets/img/phone-case.jpg" alt="Die geschlossene Nussbaumkassette auf dem iPhone mit zwei Messingscharnieren links, einem Messingverschluss rechts und einem eingravierten Springer." width="900" height="1957" loading="lazy">
+            </div>
+            <button class="clasp-hit" type="button" aria-label="Verschluss anheben"></button>
+            <span class="island" aria-hidden="true"></span>
+          </div>
+        </div>
+        <span class="demo-hint">
+          <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hand"/></svg>
+          <span data-hint data-open="Tipp auf den Verschluss" data-close="Das Brett steht">Tipp auf den Verschluss</span>
+        </span>
+        <button class="btn btn-secondary demo-btn" type="button" data-case-toggle aria-pressed="false" data-open="Kassette öffnen" data-close="Kassette schließen">Kassette öffnen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Privacy ============================ -->
+  <section class="block" id="privacy">
+    <div class="wrap">
+      <div class="walnut-panel reveal">
+        <div style="position:relative;max-width:42rem;display:grid;gap:1rem">
+          <p class="eyebrow">Datenschutz</p>
+          <h2>Nur du, dein Gegenüber und das Brett.</h2>
+          <p>Duo-Chess hat kein Konto, keine Analyse-Tools und keinen eigenen Server und startet ohne Werbung. Deine Partien und Einstellungen bleiben auf dem Gerät.</p>
+        </div>
+        <div class="grid">
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-cloud-off"/></svg>
+            <h3>Auf dem Gerät gespeichert</h3>
+            <p>Stellung, Uhren, Trainingsfortschritt und deine Einstellungen liegen lokal. Wer die App löscht, löscht auch sie.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg>
+            <h3>Keine Berechtigungen</h3>
+            <p>Keine Kamera, keine Kontakte, kein Standort. Duo-Chess fragt nach keinem Zugriff.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+            <h3>Nur Apple-Dienste</h3>
+            <p>Käufe laufen über den App Store, Game Center ist optional. Ich erhalte keine Zahlungs- oder Kontodaten.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-eye-off"/></svg>
+            <h3>Gar kein Tracking</h3>
+            <p>Keine Drittanbieter-SDKs, nichts wird für Werbung geteilt. Details in der <a href="privacy-de.html">Datenschutzerklärung</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="block tinted" id="get">
+    <div class="wrap cta reveal">
+      <img class="hero-icon" src="assets/icon-512.png" alt="" width="112" height="112">
+      <h2>Du bist bald am Zug.</h2>
+      <p class="lede">Duo-Chess ist auf dem Weg in den App Store — gemacht für iPhone Duo, zu Hause auf jedem iPhone und iPad.</p>
+      <span class="store-badge" aria-label="Bald im App Store">
+        <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+        <span><small>Bald im</small><b>App Store</b></span>
+      </span>
+      <div class="req">
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg> Entwickelt für iPhone Duo</span>
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg> iPhone &amp; iPad · ab iOS 18</span>
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-globe"/></svg> Oberfläche auf Englisch</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="index-de.html">Startseite</a>
+      <a href="support-de.html">Support</a>
+      <a href="privacy-de.html">Datenschutz</a>
+      <a href="impressum-de.html">Impressum</a>
+      <a href="index.html" hreflang="en" lang="en">English</a>
+    </div>
+    <p class="footer-note tiny">
+      © <span id="year">2026</span> Peter Hildel · Duo-Chess steht in keiner Verbindung zu Apple Inc. Apple, iPhone, iPhone Duo,
+      iPad und App Store sind Marken der Apple&nbsp;Inc. Die Bildschirmfotos stammen aus dem iOS-Simulator.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=2" defer></script>
+</body>
+</html>

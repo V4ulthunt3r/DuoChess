@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duo-Chess — A travel chess set for iPhone Duo</title>
+  <meta name="description" content="Duo-Chess turns iPhone Duo into a travel chess set: lift the clasp, unfold the phone, and the board spans both halves of the display. Two players, solo practice, clock duel, analysis and training. Free for two players; Pro and collector sets as one-time purchases. No account, no tracking.">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="de" href="index-de.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <meta name="theme-color" content="#F7F1E6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#170F0A" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Duo-Chess — A travel chess set for iPhone Duo">
+  <meta property="og:description" content="Unfold your iPhone Duo and the chess case opens with it. The board spans both halves of the display.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:locale" content="en">
+  <meta property="og:locale:alternate" content="de">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/landing.css?v=3">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div id="nav-top" aria-hidden="true"></div>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/icon-256.png" alt="" width="30" height="30">
+      <span>Duo-Chess</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-link hide-sm" href="#fold">The case</a>
+      <a class="nav-link hide-sm" href="#play">Play</a>
+      <a class="nav-link hide-sm" href="#finishes">Finishes</a>
+      <a class="nav-link hide-sm" href="#game">In action</a>
+      <a class="nav-link hide-sm" href="#pricing">Pricing</a>
+      <a class="nav-link hide-sm" href="support.html">Support</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch between light and dark" aria-pressed="false">
+        <svg class="ico" id="theme-icon" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg>
+      </button>
+      <a class="nav-link" href="index-de.html" hreflang="de" lang="de">DE</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============================ Hero ============================ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <img class="hero-icon" src="assets/icon-512.png" alt="Duo-Chess app icon: a maple and a walnut knight facing each other across a brass hinge" width="88" height="88">
+        <p class="eyebrow">Made for iPhone Duo</p>
+        <h1>Unfold the phone.<br><span class="accent">Set the board.</span></h1>
+        <p class="lede">
+          Duo-Chess turns iPhone Duo into a travel chess set. The phone is the case and the
+          display is the board: lift the brass clasp, unfold the device, and the board spans
+          both halves of the display — White on one side of the fold, Black on the other.
+        </p>
+        <div class="btn-row">
+          <span class="store-badge" aria-label="Coming soon to the App Store">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+            <span><small>Coming soon to the</small><b>App Store</b></span>
+          </span>
+          <a class="btn btn-secondary" href="#finishes">
+            See the finishes
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-arrow-down"/></svg>
+          </a>
+        </div>
+        <div class="pill-row">
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg> One board across the fold</span>
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-palette"/></svg> 19 finishes</span>
+          <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-eye-off"/></svg> No account, no tracking</span>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <div class="duo">
+          <div class="screen">
+            <img src="assets/img/duo-walnut.jpg" alt="Duo-Chess on the unfolded iPhone Duo: a Classic Walnut board in walnut and maple spans the whole inner display, with maple pieces on the left, walnut pieces on the right and “White to move” engraved in the rail." width="1800" height="1266">
+          </div>
+        </div>
+        <figcaption>Classic Walnut on iPhone Duo, recorded in the simulator.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ The case ============================ -->
+  <section class="block tinted" id="fold">
+    <div class="wrap split wide-right">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">The case</p>
+          <h2>The phone is the case. The display is the board.</h2>
+          <p>
+            No start screen, no menus to wade through. Duo-Chess opens as a closed chess case
+            in the finish you chose. Unfold the iPhone Duo and you look straight at the board.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg></span>
+            <h3>Lift the clasp, then unfold</h3>
+            <p>The clasp lifts around its pin with a soft mechanical tap. Released, the case waits for you to open the phone — the real hinge does the rest.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg></span>
+            <h3>The fold runs between the players</h3>
+            <p>Ranks follow the long side, so you sit at opposite ends. The two halves of the board meet exactly at the fold, between the fourth and fifth rank.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-fold"/></svg></span>
+            <h3>Fold it shut, mid-game</h3>
+            <p>Closing the phone locks the lid again and hides every control. The position, the clocks and even an unfinished promotion are waiting when you open it.</p>
+          </li>
+        </ul>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <div class="duo">
+          <div class="screen">
+            <img src="assets/img/duo-tournament.jpg" alt="A game in progress on the Tournament Green finish: ivory and sage squares across both halves of the iPhone Duo display." width="1800" height="1266" loading="lazy">
+            <span class="fold-mark" aria-hidden="true"><span>The fold</span></span>
+            <span class="side-tag l" aria-hidden="true">White’s half</span>
+            <span class="side-tag r" aria-hidden="true">Black’s half</span>
+          </div>
+        </div>
+        <p class="fig-note" style="margin-top:1rem">Tournament Green. The dashed line marks the Duo’s hinge.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ In action ============================ -->
+  <section class="block" id="game">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">In action</p>
+        <h2>A whole game in thirty seconds.</h2>
+        <p>Scholar’s mate on Classic Walnut with smooth piece moves switched on: legal squares appear as studs, the knight leaps, the queen strikes on f7 — and the winning king takes the podium.</p>
+      </div>
+      <figure class="reveal game-figure">
+        <div class="duo">
+          <div class="screen">
+            <video src="assets/img/duo-game.mp4" poster="assets/img/duo-game-poster.jpg" autoplay muted loop playsinline preload="metadata" width="1440" height="1012"
+                   aria-label="Recording on iPhone Duo: a two-player game on Classic Walnut. After 1. e4 e5 2. Bc4 Nc6 3. Qh5 Nf6 4. Qxf7 checkmate, a card reading “White wins” shows the white king rising on a podium between queen and rook."></video>
+          </div>
+        </div>
+        <figcaption class="fig-note">Recorded on the iPhone Duo simulator. 1. e4 e5 2. Bc4 Nc6 3. Qh5 Nf6 4. Qxf7#</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ Play ============================ -->
+  <section class="block tinted" id="play">
+    <div class="wrap split flip">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Five ways to play</p>
+          <h2>Across the table, or on your own.</h2>
+          <p>
+            New game opens five mode cards. Pick one and only the choices that matter appear —
+            then the board is set. Classic chess for two is free, with no limits.
+          </p>
+        </div>
+        <ul class="modes">
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-people"/></svg>
+            <h3>Two players</h3>
+            <p>Share the board across the table. Repetitions and the fifty-move rule are adjudicated for you.</p>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-user"/></svg>
+            <h3>Solo practice</h3>
+            <p>Choose your side and how far the computer looks ahead.</p>
+            <div class="chips"><span class="chip">Relaxed</span><span class="chip">Considered</span><span class="chip">Sharp</span></div>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-clock"/></svg>
+            <h3>Clock duel</h3>
+            <p>A clock engraved at each end, facing its player. Moving switches the clocks and adds the increment.</p>
+            <div class="chips"><span class="chip">3 + 2</span><span class="chip">5 minutes</span><span class="chip">10 + 5</span></div>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-branch"/></svg>
+            <h3>Analysis board</h3>
+            <p>Explore variations with undo and redo. A different move starts a new line.</p>
+          </li>
+          <li class="mode">
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-bulb"/></svg>
+            <h3>Training <span class="pro-tag">Pro</span></h3>
+            <p>Four mating patterns with optional hints. A move that misses the mate gently resets the position; solved lessons are remembered. The complete trainer is part of Pro.</p>
+            <div class="chips"><span class="chip">The back rank</span><span class="chip">King and queen</span><span class="chip">The knight’s net</span><span class="chip">The bishop’s net</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal" style="display:grid;justify-items:center">
+        <div class="phone">
+          <div class="screen">
+            <img src="assets/img/phone-modes.jpg" alt="The “Set the board” sheet in Duo-Chess: cards for Two players, Solo practice, Clock duel, Analysis board and Training on ivory paper." width="900" height="1957" loading="lazy">
+            <span class="island" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Finishes ============================ -->
+  <section class="block" id="finishes">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Standard finishes</p>
+        <h2>Every board brings its own case.</h2>
+        <p>
+          Each finish has its own board, chessmen, case and clasp. Selected base finishes come
+          free; Crystal Ice, Obsidian Gold and Pure Glass are part of Duo-Chess Pro. Switch any
+          time — the game stays exactly where it was. Try them here on the Duo.
+        </p>
+      </div>
+      <div class="finish-stage reveal" data-finishes>
+        <div class="duo">
+          <div class="screen">
+            <img class="on" data-key="walnut" src="assets/img/duo-walnut.jpg" alt="The Classic Walnut board on iPhone Duo." width="1800" height="1266" loading="lazy">
+          </div>
+        </div>
+        <div class="finish-meta" aria-live="polite">
+          <div><b data-finish-name>Classic Walnut</b><span class="pro-tag" data-finish-pro hidden>Pro</span> <span data-finish-sub>American walnut · warm maple</span></div>
+          <small data-finish-metal>Aged brass · traditional latch</small>
+        </div>
+        <div class="finish-picker" role="group" aria-label="Choose a finish">
+          <button class="finish-btn" type="button" aria-pressed="true" data-finish="walnut" data-src="assets/img/duo-walnut.jpg"
+                  data-name="Classic Walnut" data-sub="American walnut · warm maple" data-metal="Aged brass · traditional latch"
+                  data-alt="The Classic Walnut board on iPhone Duo.">
+            <span class="sq" style="--l:#CCA378;--d:#734731;--r:#42261A"><i></i></span>Classic Walnut</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="tournament" data-src="assets/img/duo-tournament.jpg"
+                  data-name="Tournament Green" data-sub="Flat Staunton · sage & ivory" data-metal="Satin brass · field clasp"
+                  data-alt="The Tournament Green board on iPhone Duo: flat Staunton pieces on ivory and sage squares.">
+            <span class="sq" style="--l:#EEEED2;--d:#769656;--r:#283D32"><i></i></span>Tournament</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="ocean" data-src="assets/img/duo-ocean.jpg"
+                  data-name="Ocean Blue" data-sub="Flowing outlines · blue & mist" data-metal="Brushed nickel · marine toggle"
+                  data-alt="The Ocean Blue board on iPhone Duo: flowing outline pieces on mist and deep blue squares.">
+            <span class="sq" style="--l:#DCE8EF;--d:#527A9B;--r:#20384D"><i></i></span>Ocean Blue</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="graphite" data-src="assets/img/duo-graphite.jpg"
+                  data-name="Graphite" data-sub="Geometric pieces · slate & silver" data-metal="Gunmetal · precision latch"
+                  data-alt="The Graphite board on iPhone Duo: angular pieces on silver and slate squares.">
+            <span class="sq" style="--l:#DADDE1;--d:#717985;--r:#2C313A"><i></i></span>Graphite</button>
+          <button class="finish-btn" type="button" aria-pressed="false" data-finish="lavender" data-src="assets/img/duo-lavender.jpg"
+                  data-name="Lavender" data-sub="Rounded pieces · violet & lilac" data-metal="Rose gold · rounded clasp"
+                  data-alt="The Lavender board on iPhone Duo: soft rounded pieces on lilac and violet squares.">
+            <span class="sq" style="--l:#EBE3F2;--d:#9580AF;--r:#3F324F"><i></i></span>Lavender</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="crystal" data-src="assets/img/duo-crystal.jpg"
+                  data-name="Crystal Ice" data-sub="Clear crystal · glacier blue · frosted glass" data-metal="Platinum · faceted clasp"
+                  data-alt="The Crystal Ice board on iPhone Duo: clear and cyan glass pieces on a frosted blue board with fine fractures.">
+            <span class="sq" style="--l:#B5DFE8;--d:#23738B;--r:#103A50"><i></i></span>Crystal Ice</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="obsidian" data-src="assets/img/duo-obsidian.jpg"
+                  data-name="Obsidian Gold" data-sub="Sculpted gold · black titanium · marble" data-metal="Champagne gold · monolithic latch"
+                  data-alt="The Obsidian Gold board on iPhone Duo: gold and black titanium architectural pieces on charcoal marble.">
+            <span class="sq" style="--l:#5B5C60;--d:#292B30;--r:#232329"><i></i></span>Obsidian Gold</button>
+          <button class="finish-btn is-pro" data-pro="1" type="button" aria-pressed="false" data-finish="glass" data-src="assets/img/duo-glass.jpg"
+                  data-name="Pure Glass" data-sub="Clear & smoked glass · satin-etched squares" data-metal="Polished silver · capsule clasp"
+                  data-alt="The Pure Glass board on iPhone Duo: clear and smoked glass pieces on clear and satin-etched squares.">
+            <span class="sq" style="--l:#ADB4BF;--d:#505C70;--r:#303949"><i></i></span>Pure Glass</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Tabletop ============================ -->
+  <section class="block tinted" id="tabletop">
+    <div class="wrap split wide-right">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Half open</p>
+          <h2>Fold it like a laptop. The top half becomes a desk.</h2>
+          <p>
+            Stand the Duo half open on the table and the board lies flat on the lower half. The upper
+            half turns into a desk that follows the game — and goes away again when you unfold fully.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-knight"/></svg></span>
+            <h3>Chess stage</h3>
+            <p>The position in 3D, whose turn it is, the last move, captured pieces and the computer’s strength in solo play. Free for every game.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-bulb"/></svg></span>
+            <h3>Training station <span class="pro-tag">Pro</span></h3>
+            <p>The full trainer: objective, optional hint, saved progress and an explanation once the mate is found.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-branch"/></svg></span>
+            <h3>Analysis desk <span class="pro-tag">Pro</span></h3>
+            <p>A scoresheet of the whole line. Tap any move to jump back to it.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-clock"/></svg></span>
+            <h3>Chess clock <span class="pro-tag">Pro</span></h3>
+            <p>Large digital match clocks — and a standalone clock for a real board on the table.</p>
+          </li>
+        </ul>
+      </div>
+      <figure class="reveal tabletop-figure">
+        <div class="tt" role="img" aria-label="Tabletop view on Viking Voyage: the upper half shows the chess stage with the position in 3D and “Black to move · Last move e4”, the lower half shows the flat board.">
+          <div class="tt-half tt-top"></div>
+          <div class="tt-half tt-bottom"></div>
+        </div>
+        <img class="desks" src="assets/img/desks.jpg" alt="The four desks: Chess stage, Training station (Pro) with “The back rank”, Analysis desk (Pro) with a scoresheet, and Chess clock (Pro) with two 3:00 clocks." width="1488" height="920" loading="lazy">
+        <figcaption class="fig-note">Tabletop view on Viking Voyage and the four desks, rendered for review.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ Collections ============================ -->
+  <section class="block" id="collections">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Collector sets</p>
+        <h2>Ten worlds of their own.</h2>
+        <p>
+          Cars, machines, aircraft, holidays, knights and Vikings: every collection is a fully modelled
+          set with its own case and fittings. Buy them one by one, independently of Pro, or as a bundle —
+          and preview every set before you decide.
+        </p>
+      </div>
+      <div class="collections">
+        <article class="collection wide reveal">
+          <header><h3>Ultimate Vehicle Bundle</h3><span class="price-pill">4 collections · <b>$5.99</b></span></header>
+          <div class="holiday-grid">
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/racers-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/racers-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/racers-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Pocket Racers<small>1:64 collector cars · $1.99</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/heavyDuty-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/heavyDuty-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/heavyDuty-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Heavy Duty<small>Construction machinery · $1.99</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/skySquadron-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/skySquadron-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/skySquadron-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Sky Squadron<small>Collector aircraft · $1.99</small></figcaption></figure>
+            <figure><div class="lineup vehicles">
+                <img src="assets/pieces/fieldCommand-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/fieldCommand-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/fieldCommand-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Field Command<small>Military miniatures · $1.99</small></figcaption></figure>
+          </div>
+          <p>Six vehicle roles per side. Cars drive to their square instead of hopping, machinery moves with weight, aircraft climb and bank — and Field Command’s queen is a helicopter.</p>
+        </article>
+
+        <article class="collection wide reveal">
+          <header><h3>Holiday Collection Bundle</h3><span class="price-pill">4 collections · <b>$5.99</b></span></header>
+          <div class="holiday-grid">
+            <figure><div class="lineup">
+                <img src="assets/pieces/christmas-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/christmas-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/christmas-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Christmas Eve<small>Snowmen, reindeer, Santa · $1.99</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/easter-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/easter-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/easter-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Easter Garden<small>Painted eggs, crowned bunnies · $1.99</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/halloween-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/halloween-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/halloween-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Halloween Night<small>Pumpkins, bats, a ghost queen · $1.99</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/newYear-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/newYear-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/newYear-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Midnight Celebration<small>Stars, a party pony, the midnight clock · $1.99</small></figcaption></figure>
+          </div>
+          <p>Playful toy miniatures with distinct crowns, heights and silhouettes, so every rank stays readable at playing size. Each case gets its own engraving and an enamel medallion — yours to play all year.</p>
+        </article>
+
+        <article class="collection wide reveal">
+          <header><h3>Legends Collection Bundle</h3><span class="price-pill">2 collections · <b>$2.99</b></span></header>
+          <div class="holiday-grid legends">
+            <figure><div class="lineup">
+                <img src="assets/pieces/kingdom-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-white-bishop.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/kingdom-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Kingdom Knights<small>Silver &amp; blue against steel &amp; crimson · $1.99</small></figcaption></figure>
+            <figure><div class="lineup">
+                <img src="assets/pieces/vikings-white-pawn.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-knight.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-white-bishop.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-rook.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-white-queen.webp" alt="" width="240" height="240" loading="lazy">
+                <img src="assets/pieces/vikings-black-king.webp" alt="" width="240" height="240" loading="lazy">
+              </div><figcaption>Viking Voyage<small>Ash &amp; teal against oak &amp; rust · $1.99</small></figcaption></figure>
+          </div>
+          <p>Two rival medieval houses with shield guards, mounted knights and castle towers — and two Norse clans with dragon longships, rune seers and a crowned jarl, in a plank-built oak case with iron straps.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Pricing ============================ -->
+  <section class="block tinted" id="pricing">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Free, Pro &amp; collections</p>
+        <h2>Play for free. Unlock more once.</h2>
+        <p>Play chess for two for free. Duo-Chess Pro unlocks extra game modes, themes and chess training with a single purchase. Special piece worlds are available separately as collections and bundles. No subscription. No ads at launch.</p>
+      </div>
+      <div class="plans plans-3 reveal">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="plan-price">$0</p>
+          <ul>
+            <li>Unlimited classic chess for two</li>
+            <li>Unfold the Duo and play — the case, the clasp and the board across the fold</li>
+            <li>Selected base finishes</li>
+            <li>The chess stage when the Duo stands half open</li>
+            <li>No ads at launch</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Duo-Chess Pro</h3>
+          <p class="plan-price">$9.99 <small>one-time</small></p>
+          <ul>
+            <li>Crystal Ice, Obsidian Gold and Pure Glass</li>
+            <li>Extended modes for the half-open Duo: training station, analysis desk, chess clock</li>
+            <li>The standalone clock for a real board</li>
+            <li>The complete chess trainer</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Collections</h3>
+          <p class="plan-price">$1.99 <small>each</small></p>
+          <ul>
+            <li>Ten collector sets, each bought on its own, independently of Pro</li>
+            <li>Ultimate Vehicle Bundle — four vehicle sets for $5.99</li>
+            <li>Holiday Collection Bundle — four holiday sets for $5.99</li>
+            <li>Legends Collection Bundle — knights and Vikings for $2.99</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans-note tiny reveal"><span class="tag tag-plan">Planned for launch</span> Paid offers are planned for launch. Prices are US launch prices; prices in your country may differ. All purchases are permanent one-time purchases, restorable on every device with the same Apple Account. Pro does not include the collections.</p>
+    </div>
+  </section>
+
+  <!-- ============================ Details ============================ -->
+  <section class="block" id="details">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Details</p>
+        <h2>Pieces with weight.</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-motion"/></svg></span>
+          <h3>Smooth piece moves</h3>
+          <p>Optional: knights leap in an arc, bishops lean, pawns step and rooks glide close to the board. Every finish tunes its own motion. Off by default.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-sound"/></svg></span>
+          <h3>Wood on wood</h3>
+          <p>A dry placement sound, a lower strike for captures, paired taps for castling — with matching haptics. Sound and haptics have separate switches and follow the silent switch.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg></span>
+          <h3>A podium for the winner</h3>
+          <p>At the end, the winning king rises between its queen and rook in your finish’s own pieces. A draw has both kings bow. The final position stays one tap away.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-resize"/></svg></span>
+          <h3>Piece size</h3>
+          <p>Scale the chessmen from 70% to 120% with a live preview. Squares and touch targets keep their size.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-trophy"/></svg></span>
+          <h3>Game Center</h3>
+          <p>Twelve achievements, from your first castle to all four lessons solved without hints, and leaderboards for solo wins at every strength. Optional — guests play just the same.</p>
+        </article>
+        <article class="card reveal">
+          <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-access"/></svg></span>
+          <h3>For everyone</h3>
+          <p>VoiceOver names every square and announces legal moves. Dynamic Type, Reduce Motion, Reduce Transparency and Increase Contrast are all respected.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Other iPhones ============================ -->
+  <section class="block tinted" id="iphone">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Also on iPhone and iPad</p>
+          <h2>A lid instead of a hinge.</h2>
+          <p>
+            Without a fold, the case gets a virtual lid. Lift the clasp and it swings open around
+            its hinges; the board menu closes it again.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hand"/></svg></span>
+            <h3>Try it here</h3>
+            <p>Tap the brass clasp on the phone beside this text.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg></span>
+            <h3>Same game, same finishes</h3>
+            <p>Every mode, finish and setting works on any iPhone or iPad running iOS 18 or later.</p>
+          </li>
+          <li>
+            <span class="badge"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-restore"/></svg></span>
+            <h3>Picks up where you left off</h3>
+            <p>Your game is saved on the device and survives every opening, closing and relaunch.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="case-demo reveal" data-case>
+        <div class="phone">
+          <div class="screen">
+            <img src="assets/img/phone-board.jpg" alt="The open case on iPhone: a Classic Walnut board in portrait after 1. e4 d5, with “White to move” below the board and the brass menu fitting." width="900" height="1957" loading="lazy">
+            <div class="lid">
+              <img src="assets/img/phone-case.jpg" alt="The closed walnut case on iPhone with two brass hinges on the left, a brass clasp on the right and an engraved knight." width="900" height="1957" loading="lazy">
+            </div>
+            <button class="clasp-hit" type="button" aria-label="Lift the clasp"></button>
+            <span class="island" aria-hidden="true"></span>
+          </div>
+        </div>
+        <span class="demo-hint">
+          <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hand"/></svg>
+          <span data-hint data-open="Tap the clasp to open" data-close="The board is set">Tap the clasp to open</span>
+        </span>
+        <button class="btn btn-secondary demo-btn" type="button" data-case-toggle aria-pressed="false" data-open="Open the case" data-close="Close the case">Open the case</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Privacy ============================ -->
+  <section class="block" id="privacy">
+    <div class="wrap">
+      <div class="walnut-panel reveal">
+        <div style="position:relative;max-width:42rem;display:grid;gap:1rem">
+          <p class="eyebrow">Privacy</p>
+          <h2>Just you, your opponent and the board.</h2>
+          <p>Duo-Chess has no account, no analytics and no server of its own, and it launches without ads. Your games and settings stay on the device.</p>
+        </div>
+        <div class="grid">
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-cloud-off"/></svg>
+            <h3>Saved on the device</h3>
+            <p>The position, clocks, training progress and your preferences are stored locally. Deleting the app removes them.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-shield"/></svg>
+            <h3>No permissions needed</h3>
+            <p>No camera, no contacts, no location. Duo-Chess doesn’t ask for any access.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+            <h3>Apple services only</h3>
+            <p>Purchases go through the App Store, and Game Center is optional. I receive no payment or account data.</p>
+          </div>
+          <div>
+            <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-eye-off"/></svg>
+            <h3>No tracking at all</h3>
+            <p>No third-party SDKs, nothing shared for advertising. Details in the <a href="privacy.html">privacy policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="block tinted" id="get">
+    <div class="wrap cta reveal">
+      <img class="hero-icon" src="assets/icon-512.png" alt="" width="112" height="112">
+      <h2>Your move, soon.</h2>
+      <p class="lede">Duo-Chess is on its way to the App Store — made for iPhone Duo, at home on every iPhone and iPad.</p>
+      <span class="store-badge" aria-label="Coming soon to the App Store">
+        <svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-apple"/></svg>
+        <span><small>Coming soon to the</small><b>App Store</b></span>
+      </span>
+      <div class="req">
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-hinge"/></svg> Designed for iPhone Duo</span>
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg> iPhone &amp; iPad · iOS 18 or later</span>
+        <span class="pill"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-globe"/></svg> Interface in English</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="impressum.html">Legal Notice</a>
+      <a href="index-de.html" hreflang="de" lang="de">Deutsch</a>
+    </div>
+    <p class="footer-note tiny">
+      © <span id="year">2026</span> Peter Hildel · Duo-Chess is not affiliated with Apple Inc. Apple, iPhone, iPhone Duo,
+      iPad and App Store are trademarks of Apple&nbsp;Inc. Screenshots were taken in the iOS Simulator.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=2" defer></script>
+</body>
+</html>
