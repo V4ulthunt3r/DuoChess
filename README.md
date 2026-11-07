@@ -21,7 +21,7 @@ assets/site.js            theme toggle, nav edge, scroll reveal, finish switcher
 assets/icons.svg          icon sprite, referenced as assets/icons.svg#i-…
 assets/frame-duo-inner.svg  iPhone Duo frame (ShotForge), inner display 2853×2007 at 75,75
 assets/icon-*.png         generated from AppIcon.appiconset in the Xcode project
-assets/img/duo-*.jpg      inner-display screenshots from the iPhone Duo simulator (iOS 27.1), turned to landscape
+assets/img/duo-*.jpg      inner-display screenshots from the iPhone Duo simulator (iOS 27.1), app in landscape
 assets/img/phone-*.jpg    iPhone 17 Pro simulator: closed case, open board, mode sheet
 assets/img/tabletop.jpg   Duo tabletop view (Classic Walnut chess stage over the board)
 assets/img/desks.jpg      the four tabletop desks, upper halves of four Duo captures
@@ -35,7 +35,8 @@ closed case over the open board; the clasp hotspot (`.clasp-hit`) sits over the 
 `phone-case.jpg` and the lid turns around its left edge, like the 760 ms lid in the app.
 
 `assets/img/duo-game.mp4` is a 32-second recording of the Duo simulator's inner display: a UI
-test plays Scholar's mate on Classic Walnut with smooth piece moves, ending on the result podium.
+test turns the device to landscape and plays Scholar's mate on Classic Walnut with smooth piece
+moves, ending on the result podium. Don't rotate portrait captures: the pieces would lie on their side.
 The tabletop visual tilts the two halves of `tabletop.jpg` in CSS (`.tt`).
 
 All screenshots and the video were captured on 7 November 2026 from the app's current sources,
